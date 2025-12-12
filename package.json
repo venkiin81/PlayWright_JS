@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "AllComplete": "npx playwright test Program_One_SauSeLab.spec.js"
+
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

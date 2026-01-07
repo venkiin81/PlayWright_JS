@@ -1,21 +1,22 @@
-const {test, expect} = require('@playwright/test');
+import { test, expect } from '@playwright/test';
+import 'dotenv/config';
 
 test('Login_Test',async function({page}){
 
-   await page.goto("https://www.saucedemo.com/");
+   await page.goto(process.env.Url);
    await console.log("login1");
 
 })
 
 test('Login_2_Test',async ({page})=>{
 
-   await page.goto("https://www.saucedemo.com/");
+   await page.goto(process.env.Url);//url navigation
    
-   await page.locator("//input[@placeholder='Username']").fill("standard_user")
-   await page.locator("//input[@placeholder='Password']").fill("secret_sauce")
+   await page.locator("//input[@placeholder='Username']").fill(process.env.User_Name)
+   await page.locator("//input[@placeholder='Password']").fill(process.env.Password)
    await page.locator("//input[@id='login-button']").click();
    await console.log("login2");
-   await page.waitForTimeout(5000);
+   await page.waitForTimeout(Number(process.env.CustomTimeout));
 
 })
 
@@ -103,4 +104,18 @@ test("Fetching_all_products",async ({page})=>{
    await page.locator("//button [@id='back-to-products']").click()
 
 })
+
+test('upload_a_file',async({page})=>{
+
+   await page.goto(process.env.Url_Upload_Herou)
+   page.pause()
+   await page.locator("//input[@id='file-upload']").setInputFiles("C:/Users/WELCOME/Desktop/Test/testupload.txt")
+
+   page.pause()
+   await page.locator("//input[@id='file-submit']").click();
+
+   await expect(page.locator("//h3[text()='File Uploaded!']")).toBeVisible()
+
+})
+
 

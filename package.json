@@ -1,18 +1,23 @@
 {
-  "name": "playwright",
+  "name": "playwright-tests",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "AllComplete": "npx playwright test Program_One_SauSeLab.spec.js"
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@playwright/test": "^1.56.1",
-    "@types/node": "^24.10.1"
+    "@types/node": "^24.10.1",
+    "playwright": "^1.57.0"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "moment-timezone": "^0.6.0",
+    "winston": "^3.19.0"
   }
 }

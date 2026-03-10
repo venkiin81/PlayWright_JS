@@ -1,0 +1,149 @@
+:root {
+  --primary: #1f4de3;
+  --dark: #0f172a;
+  --muted: #5b6475;
+  --bg: #f4f7ff;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--dark);
+  background: var(--bg);
+  line-height: 1.6;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(130deg, #11236f, var(--primary));
+  color: var(--white);
+  padding: 4.5rem 0;
+  text-align: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  opacity: 0.95;
+}
+
+.hero h1 {
+  margin: 0.4rem 0;
+  font-size: clamp(1.9rem, 5vw, 3.2rem);
+  line-height: 1.2;
+}
+
+.hero h1 span {
+  color: #cfe0ff;
+}
+
+.subtitle {
+  margin: 0 auto 1.6rem;
+  max-width: 700px;
+}
+
+.btn {
+  background: #ffd446;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.section {
+  padding: 3.2rem 0;
+}
+
+.section-alt {
+  background: #edf2ff;
+}
+
+h2 {
+  margin-top: 0;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+}
+
+.card {
+  background: var(--white);
+  border-radius: 0.8rem;
+  padding: 1.1rem;
+  border: 1px solid #d9e2ff;
+}
+
+.table-wrap {
+  overflow-x: auto;
+  background: var(--white);
+  border-radius: 0.8rem;
+  border: 1px solid #dae4ff;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 1rem;
+  border-bottom: 1px solid #e7edff;
+}
+
+th {
+  background: #e9f0ff;
+}
+
+.lead {
+  color: var(--muted);
+}
+
+.list-grid {
+  display: grid;
+  gap: 0.7rem;
+  padding-left: 1rem;
+}
+
+.stories {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stories article {
+  background: var(--white);
+  border-left: 5px solid var(--primary);
+  padding: 1rem;
+  border-radius: 0.6rem;
+}
+
+footer {
+  background: var(--dark);
+  color: var(--white);
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
